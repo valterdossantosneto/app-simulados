@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Crase - Montar Frases</title>
+  <link rel="stylesheet" href="styleterc.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <h1>Estudo para Concursos</h1>
+      <p>Monte a frase na ordem correta para fixar a regra da <strong>Crase</strong></p>
+    </header>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filtrarCategoria('todas')">Todas (<span id="count-todas">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('obrigatoria')">Obrigatória (<span id="count-obrigatoria">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('facultativa')">Facultativa (<span id="count-facultativa">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('proibida')">Proibida (<span id="count-proibida">0</span>)</button>
+    </div>
+
+    <!-- Progresso e Categoria -->
+    <div class="progress-info">
+      <span class="badge" id="card-tag">CATEGORIA</span>
+      <div>Desafio <span id="current-card-num">1</span> de <span id="total-cards-num">0</span></div>
+    </div>
+
+    <!-- Área de Exibição do Desafio -->
+    <div class="game-board">
+      <h2 id="rule-title" class="rule-title">Título da Regra</h2>
+
+      <!-- Área onde a frase vai sendo construída -->
+      <div class="phrase-zone" id="user-phrase-zone">
+        <span class="placeholder-text">Clique nas palavras abaixo para montar a frase...</span>
+      </div>
+
+      <!-- Feedback de Sucesso ou Erro -->
+      <div id="feedback" class="feedback"></div>
+
+      <!-- Banco de Palavras Embaralhadas -->
+      <div class="words-bank" id="words-bank">
+        <!-- Palavras serão inseridas dinamicamente via JS -->
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+      <button class="control-btn secondary" onclick="reiniciarCartao()">🔄 Reiniciar Frase</button>
+      <button class="control-btn primary" onclick="cartaoAnterior()">⬅️ Anterior</button>
+      <button class="control-btn primary" onclick="proximoCartao()">Próximo ➡️</button>
+    </div>
+  </div>
+
+  <script src="scriptterc.js"></script>
+</body>
+</html>

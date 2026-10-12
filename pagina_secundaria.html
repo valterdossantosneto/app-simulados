@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorização de Concursos - Regras da Crase</title>
+  <link rel="stylesheet" href="stylesec.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <h1>Estudo para Concursos</h1>
+      <p>Dominando a <strong>Crase</strong></p>
+    </header>
+
+    <!-- Filtros por Categoria -->
+    <div class="filters">
+      <button class="filter-btn active" onclick="filtrarCategoria('todas')">Todas (<span id="count-todas">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('obrigatoria')">Obrigatória (<span id="count-obrigatoria">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('facultativa')">Facultativa (<span id="count-facultativa">0</span>)</button>
+      <button class="filter-btn" onclick="filtrarCategoria('proibida')">Proibida (<span id="count-proibida">0</span>)</button>
+    </div>
+
+    <!-- Contador de Progresso -->
+    <div class="progress-info">
+      Cartão <span id="current-card-num">1</span> de <span id="total-cards-num">0</span>
+    </div>
+
+    <!-- Flashcard -->
+    <div class="card-wrapper" onclick="virarCartao()">
+      <div class="card" id="card">
+        <div class="card-face card-front">
+          <span class="badge" id="card-tag">Categoria</span>
+          <h2 id="card-title">Título/Pergunta</h2>
+          <p class="hint">Toque ou clique para virar o cartão 🔄</p>
+        </div>
+        <div class="card-face card-back">
+          <h3>Explicação & Exemplos</h3>
+          <p id="card-content">Conteúdo explicativo aqui...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles de Navegação -->
+    <div class="controls">
+      <button class="control-btn" onclick="cartaoAnterior()">⬅️ Anterior</button>
+      <button class="control-btn" onclick="virarCartao()">🔄 Virar</button>
+      <button class="control-btn" onclick="proximoCartao()">Próximo ➡️</button>
+    </div>
+  </div>
+
+  <script src="scriptsec.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #1a202c;
+}
+
+header p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.filter-btn {
+  border: 1px solid #cbd5e0;
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: #3182ce;
+  color: #ffffff;
+  border-color: #3182ce;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #a0aec0;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.badge {
+  background: #ebf8ff;
+  color: #2b6cb0;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.obrigatoria { background: #feebc8; color: #c05621; }
+.badge.facultativa { background: #ebf8ff; color: #2b6cb0; }
+.badge.proibida    { background: #fed7d7; color: #9b2c2c; }
+
+/* Game Board */
+.game-board {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-title {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+/* Zona onde as palavras vão sendo encaixadas */
+.phrase-zone {
+  min-height: 70px;
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.placeholder-text {
+  color: #a0aec0;
+  font-size: 0.85rem;
+}
+
+/* Banco de Palavras */
+.words-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+/* Estilo das Peças/Palavras */
+.word-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e0;
+  color: #2d3748;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+
+.word-btn:hover {
+  border-color: #3182ce;
+  background: #ebf8ff;
+  transform: translateY(-2px);
+}
+
+.word-btn:active {
+  transform: translateY(0);
+}
+
+/* Feedback Visual */
+.feedback {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  min-height: 24px;
+}
+
+.feedback.success { color: #38a169; }
+.feedback.error   { color: #e53e3e; }
+
+/* Controles */
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.control-btn.primary {
+  flex: 2;
+  background-color: #3182ce;
+  color: white;
+}
+
+.control-btn.primary:hover {
+  background-color: #2b6cb0;
+}
+
+.control-btn.secondary {
+  flex: 1;
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.control-btn.secondary:hover {
+  background-color: #cbd5e0;
+}
